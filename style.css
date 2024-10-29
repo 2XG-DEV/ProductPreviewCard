@@ -1,0 +1,188 @@
+:root {
+  /* Primary Colors */
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+
+  /* Neutral Colors */
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+
+  --deep-aquamarine-hover: #1a4032;
+}
+
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+
+  background: var(--cream, #f2eae2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html {
+    scroll-behavior: initial;
+  }
+}
+
+h1 {
+  color: var(--very-dark-blue, #1c232b);
+  font-feature-settings: "liga" off, "clig" off;
+  /* Display */
+  font-family: Fraunces;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2rem; /* 100% */
+  margin-bottom: 1rem;
+  margin-top: 0.75rem;
+}
+
+p {
+  color: var(--dark-grayish-blue, #6c7289);
+  font-feature-settings: "liga" off, "clig" off;
+  /* Body */
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.4375rem; /* 164.286% */
+  margin-bottom: 1.5rem;
+}
+
+button {
+  border-radius: 0.5rem;
+  background: var(--dark-cyan, #3d8168);
+  border: none;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 0.74rem;
+  padding: 0.94rem 0;
+
+  color: var(--white, #fff);
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+button:hover {
+  background: var(--deep-aquamarine-hover, #1a4032);
+  cursor: pointer;
+}
+
+article {
+  max-width: 37.5rem;
+  border-radius: 0.625rem;
+  background: var(--white, #fff);
+  overflow: hidden;
+}
+
+.category {
+  color: var(--dark-grayish-blue, #6c7289);
+  font-feature-settings: "liga" off, "clig" off;
+  text-transform: uppercase;
+  font-family: Montserrat;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.3125rem;
+}
+
+.content {
+  padding: 2rem 1.5rem;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.price--current {
+  color: var(--dark-cyan, #3d8168);
+  font-feature-settings: "liga" off, "clig" off;
+
+  /* Display */
+  font-family: Fraunces;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2rem; /* 100% */
+}
+
+.price--old {
+  color: var(--dark-grayish-blue, #6c7289);
+  font-family: Montserrat;
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.4375rem; /* 176.923% */
+  text-decoration-line: line-through;
+}
+
+@media only screen and (min-width: 37.5rem) {
+  article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
